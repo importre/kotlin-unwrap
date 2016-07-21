@@ -17,6 +17,6 @@ repositories {
 }
 
 dependencies {
-    compile "com.importre:kotlin-unwrap:0.0.1"
+    compile "com.importre:kotlin-unwrap:0.1.0"
     compile "org.jetbrains.kotlin:kotlin-stdlib:1.0.3"
 }
