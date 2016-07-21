@@ -4,6 +4,7 @@
 
 > Unwrap nullable variables
 
+
 ## build.gradle
 
 ```gradle
@@ -15,6 +16,7 @@ dependencies {
     compile "com.importre:kotlin-unwrap:<VERSION>"
 }
 ```
+
 
 ## Example
 
@@ -50,11 +52,23 @@ fun main(args: Array<String>) {
 }
 ```
 
+### Error handling
+
+```kotlin
+unwrap(_a, _b) { a, b ->
+  // do something
+} ?: run {
+  // handle error
+}
+```
+
+
 ## Test
 
 ```sh
 $ ./gradlew check
 ```
+
 
 ## License
 
