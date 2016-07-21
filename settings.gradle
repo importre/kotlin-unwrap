@@ -1,2 +1,3 @@
 rootProject.name = 'kotlin-unwrap'
+include 'example'
 
