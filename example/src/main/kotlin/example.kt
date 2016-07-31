@@ -1,29 +1,30 @@
-// returns nullable
-fun foo(name: String?): String? = name
+private fun foo(name: String?): String? = name
 
-fun bar(): String {
+private fun bar() {
     val _a = foo("Hello")
     val _b = foo("World")
     val _c = foo("!")
 
-    // unwrap all variables
-    return unwrap(_a, _b, _c) { a, b, c ->
-        "$a $b$c"
-    } ?: return ""
+    // example: unwrap all variables
+    unwrap(_a, _b, _c) { a, b, c ->
+        println("$a, $b$c")
+    }
 }
 
-fun baz(): String {
+private fun baz() {
     val _a = foo("Hello")
     val _b = foo("World")
     val _c = foo(null)
 
-    // unwrap all variables
-    return unwrap(_a, _b, _c) { a, b, c ->
-        "$a $b$c"
-    } ?: return ""
+    // example: error handing
+    unwrap(_a, _b, _c) { a, b, c ->
+        println("$a, $b$c")
+    } nah {
+        println("Nah!")
+    }
 }
 
 fun main(args: Array<String>) {
-    println(bar())       // "Hello World!"
-    println(baz() == "") // true
+    bar() // Hello World!
+    baz() // Nah!
 }

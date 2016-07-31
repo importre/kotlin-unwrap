@@ -22,7 +22,7 @@ apply plugin: 'maven-publish'
 
 def _group = 'com.importre'
 def _artifact = 'kotlin-unwrap'
-def _version = '0.1.0'
+def _version = '0.2.0'
 def _githubUrl = 'https://github.com/importre/kotlin-unwrap'
 
 group _group
