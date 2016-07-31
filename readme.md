@@ -1,6 +1,6 @@
 <h1 align="center">kotlin-unwrap</h1>
 
-<h1 align="center">🎁📦💝🎁📦💝🎁📦💝</h1>
+<p align="center">🎁📦💝🎁📦💝🎁📦💝</p>
 
 [![Download][bintray-badge]][bintray-version]
 [![Build Status][travis-badge]][travis-url]
