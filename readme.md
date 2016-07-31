@@ -24,17 +24,20 @@ dependencies {
 ## Example
 
 ```kotlin
+// returns nullable
+fun foo(name: String?): String? = name
+
 val _a = foo("Hello")
 val _b = foo("World")
 val _c = foo("!")
 
 // example: unwrap all variables
 unwrap(_a, _b, _c) { a, b, c ->
-    println("$a, $b$c")
+    println("$a, $b$c") // invoked
 }
 ```
 
-### Error handling
+### Error handling using `nah`
 
 ```kotlin
 val _a = foo("Hello")
@@ -43,9 +46,9 @@ val _c = foo(null)
 
 // example: error handing
 unwrap(_a, _b, _c) { a, b, c ->
-    println("$a, $b$c")
+    println("$a, $b$c") // not invoked
 } nah {
-    println("Nah!")
+    println("Nah!")     // invoked because `_c` is null
 }
 ```
 
