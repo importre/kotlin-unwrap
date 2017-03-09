@@ -1,7 +1,7 @@
 package com.importre.unwrap
 
 class Unwrap(private var valid: Boolean) {
-    infix fun <R> nah(f: () -> R) {
+    infix fun <R> otherwise(f: () -> R) {
         if (!valid) f()
     }
 }

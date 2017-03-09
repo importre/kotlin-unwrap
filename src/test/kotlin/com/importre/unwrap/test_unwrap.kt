@@ -17,7 +17,7 @@ class UnwrapTest {
 
             unwrap(_a) { a ->
                 validCount++
-            } nah {
+            } otherwise {
                 invalidCount++
             }
 
@@ -32,7 +32,7 @@ class UnwrapTest {
 
             unwrap(_a) { a ->
                 validCount++
-            } nah {
+            } otherwise {
                 invalidCount++
             }
 
@@ -63,7 +63,7 @@ class UnwrapTest {
 
         unwrap(_a, _b) { a, b ->
             validCount++
-        } nah {
+        } otherwise {
             invalidCount++
         }
 
@@ -82,7 +82,7 @@ class UnwrapTest {
             validCount++
             assertEquals(a.value, 1)
             assertEquals(b.value, 2)
-        } nah {
+        } otherwise {
             invalidCount++
         }
 
@@ -103,7 +103,7 @@ class UnwrapTest {
             assertEquals(a.value, 1)
             assertEquals(b.value, 2)
             assertEquals(c.value, "unwrap")
-        } nah {
+        } otherwise {
             invalidCount++
         }
 
@@ -123,7 +123,7 @@ class UnwrapTest {
                 assertEquals(c, 3)
                 assertEquals(d, 4)
                 validCount++
-            } nah {
+            } otherwise {
                 invalidCount++
             }
 
@@ -137,7 +137,7 @@ class UnwrapTest {
 
             unwrap(1, 2, 3, null) { a, b, c, d ->
                 validCount++
-            } nah {
+            } otherwise {
                 invalidCount++
             }
 
@@ -159,7 +159,7 @@ class UnwrapTest {
                 assertEquals(d, 'l')
                 assertEquals(e, "o")
                 validCount++
-            } nah {
+            } otherwise {
                 invalidCount++
             }
 
@@ -173,7 +173,7 @@ class UnwrapTest {
 
             unwrap(1, 2, 3, null, 5) { a, b, c, d, e ->
                 validCount++
-            } nah {
+            } otherwise {
                 invalidCount++
             }
 
