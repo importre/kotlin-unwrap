@@ -4,7 +4,7 @@ class Unwrap {
 
     var valid: Boolean = false
 
-    infix fun <R> nah(f: Unwrap.() -> R) {
+    infix fun <R> otherwise(f: Unwrap.() -> R) {
         if (!valid) f()
     }
 }
