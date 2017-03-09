@@ -10,7 +10,7 @@ class UnwrapTest {
     class Dummy2(val value: String)
 
     @Test
-    fun testWithoutNah() {
+    fun testWithoutOtherwise() {
         val _a = Dummy1(1)
         val _b = Dummy2("1")
         var validCount = 0
@@ -31,7 +31,7 @@ class UnwrapTest {
 
         unwrap(_a, _b) { a, b ->
             validCount++
-        } nah {
+        } otherwise {
             invalidCount++
         }
 
@@ -50,7 +50,7 @@ class UnwrapTest {
             validCount++
             assertEquals(a.value, 1)
             assertEquals(b.value, 2)
-        } nah {
+        } otherwise {
             invalidCount++
         }
 
@@ -71,7 +71,7 @@ class UnwrapTest {
             assertEquals(a.value, 1)
             assertEquals(b.value, 2)
             assertEquals(c.value, "unwrap")
-        } nah {
+        } otherwise {
             invalidCount++
         }
 
