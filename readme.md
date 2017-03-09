@@ -37,7 +37,7 @@ unwrap(_a, _b, _c) { a, b, c ->
 }
 ```
 
-### Error handling using `nah`
+### Error handling using `otherwise`
 
 ```kotlin
 val _a = foo("Hello")
@@ -47,7 +47,7 @@ val _c = foo(null)
 // example: error handing
 unwrap(_a, _b, _c) { a, b, c ->
     println("$a, $b$c") // not invoked
-} nah {
+} otherwise {
     println("Nah!")     // invoked because `_c` is null
 }
 ```
