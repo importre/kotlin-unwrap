@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.1.0'
+    ext.kotlin_version = '1.1.2'
     ext.dokka_version = '0.9.13'
 
     repositories {
@@ -22,7 +22,7 @@ apply plugin: 'maven-publish'
 
 def _group = 'com.importre'
 def _artifact = 'kotlin-unwrap'
-def _version = '0.3.0'
+def _version = '0.3.1'
 def _githubUrl = 'https://github.com/importre/kotlin-unwrap'
 
 group _group
